@@ -35,7 +35,7 @@ class Embedder:
             
         for freq in freq_bands:
             for p_fn in self.kwargs['periodic_fns']:
-                embed_fns.append(lambda x, p_fn=p_fn, freq=freq : p_fn(x * freq))
+                embed_fns.append(lambda x, p_fn = p_fn,freq = freq: p_fn(x * freq))
                 out_dim += d
                     
         self.embed_fns = embed_fns
